@@ -75,6 +75,18 @@ class TextNode extends AbstractNode {
 		}
 	}
 
+    /**
+     * Sets the text of this node.
+     *
+     * @return string
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+        return $this->text;
+    }
+
+
 	/**
 	 * This node has no html, just return the text.
 	 *
