@@ -210,6 +210,12 @@ class HtmlNode extends ArrayNode {
     public function setText($text)
     {
         $this->text = $text;
+
+        foreach ($this->children as $child)
+        {
+            $child['node']->setText($text);
+        }
+
         return $this->text;
     }
 
